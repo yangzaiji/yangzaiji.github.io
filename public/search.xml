@@ -4,11 +4,24 @@
   
     
     <entry>
-      <title>多层感知机</title>
-      <link href="/2022/05/25/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/"/>
-      <url>/2022/05/25/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/</url>
+      <title>多层感知机-笔记</title>
+      <link href="/2022/05/28/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/"/>
+      <url>/2022/05/28/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/</url>
       
-        <content type="html"><![CDATA[<h1 id="neural-networks">Neural Networks</h1><h2 id="背景">背景</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="multilayer-perceptionsmlp">Multilayer perceptions(MLP)</h1><h2 id="单层感知机">单层感知机</h2><p>单层感知机又叫做<strong>稠密层 Dense</strong>(<strong>全连接层</strong>，<strong>线性层</strong>) 主要有两个可学习参数，主要有两个可学习参数:<span class="math inline">\(\mathbf{W} \in \mathbb{R}^{m \times n},\mathbf{b} \in \mathbb{R}^{m}\)</span>,输入数据为<span class="math inline">\(\mathbf{x}\in \mathbb{R}^{n}\)</span> 则其输出为:<span class="math inline">\(\mathbf{y}=\mathbf{W} \mathbf{x}+\mathbf{b} \in \mathbb{R}^{m}\)</span> 我们可以将线性回归和Softmax回归总结如下: - 线性回归可以看做是只有1个输出的全连接层 - Softmax回归可以看做是有<span class="math inline">\(\mathbb{m}\)</span>个输出(<span class="math inline">\(\mathbb{m}\)</span>是分类的类别数)进行Softmax运算</p><h2 id="多层感知机">多层感知机</h2><p>因为单层感知机是一个线性运算，所以简单的单个感知机叠加没法处理非线性问题(如&quot;异或&quot;问题)。 为了引入非线性运算，神经网络在每个层之间增加了一个按元素进行非线性运算的操作，也就是激活函数(Activation Function)</p><h3 id="常见的激活函数">常见的激活函数</h3><h4 id="sigmoid">sigmoid</h4><p><span class="math display">\[\operatorname{sigmoid}(x)=\frac{1}{1+\exp (-x)}\]</span></p><h4 id="relu">ReLU</h4><p><span class="math display">\[\operatorname{ReLU}(x)=\max (x,0)\]</span></p><h3 id="mlp">MLP</h3><p>而所谓的多层感知机就是将多个全连接层堆叠，全连接层之间通过激活函数链接。</p><p>常见的单隐藏层和三层隐藏层的网络结构图如图所示(有颜色的是隐藏层)</p><figure><img src="/.com//网络图.png" alt="网络结构图"><figcaption>网络结构图</figcaption></figure><p>其中隐藏层个数的选择和隐藏层输出维度的选择都是超参数(需要自己设定)。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>多层感知机</title>
+      <link href="/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+      <url>/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="neural-networks">Neural Networks</h1><h2 id="背景">背景</h2><h3 id="text-handcrafted-features-rightarrow-text-learned-features"><span class="math inline">\(\text { Handcrafted Features } \rightarrow \text { Learned Features }\)</span></h3><figure><img src="/.com//手动提取特征到学习特征.png" alt="手动提取特征到学习特征"><figcaption>手动提取特征到学习特征</figcaption></figure><p>传统的机器学习通常需要对原始数据进行一些特征工程提取数据特征，在放到机器学习模型中。</p><p>而神经网络(以及所谓的深度学习，深度神经网络)可以看做是将传统的机器学习模型训练流程中的人工提取特征换成一个神经网络来进行特征提取。</p><p>将特征提取和线性(或者softmax)回归一起进行训练，所以相比于人工提取特征来说，数据经过训练后的特征提取器(神经网络)得到的特征更适合线性(或者softmax)回归，所以精度往往更加。</p><p><strong>缺点</strong>:神经网络模型相比于其他传统的及其学习模型来说，对于<strong>数据量</strong>和<strong>计算量</strong>的需求往往大数个<strong>数量级</strong>（1000倍，1w倍甚至10w倍），主要因素在于计算机在进行特征提取的时候没有人这么多的先验知识,所以只能通过大量的数据不断地去做损失迭代更新来学习。 ____</p><h2 id="neural-networks中常见的特征提取模型">Neural Networks中常见的特征提取模型</h2><ul><li>Multilayer perceptions(MLP)</li><li>Convolutional neural networks(CNN)</li><li>Recurrent neural networks(RNN)</li><li>Transsformers(最近兴起的)</li><li>Attention mechanism</li></ul>]]></content>
       
       
       
@@ -21,7 +34,7 @@
       <link href="/2022/05/23/Dimensionality-reduction/"/>
       <url>/2022/05/23/Dimensionality-reduction/</url>
       
-        <content type="html"><![CDATA[<h1 id="降维dimensionality-reduction">降维(Dimensionality reduction)</h1><h2 id="背景">背景</h2><p>在机器学习中，相比于<strong>训练误差</strong>，更加关心<strong>泛化误差</strong>。</p><p>为了解决<strong>过拟合</strong>问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维</p><p>而在平常时维度过高可能会造成<strong>维度灾难</strong>，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。</p><h3 id="维度灾难disadvantages">维度灾难(disadvantages)</h3><h1 id="预备知识">预备知识</h1><p><span class="math inline">\(\text{Data:}x=(x_{1},x_{2},...,x_{n})^\top_{N\times P}=\begin{bmatrix} x^\top_{1} \\ x^\top_{2} \\ ...\\ x^\top_{n} \end{bmatrix}=\begin{bmatrix}  x_{11} &amp; x_{12} &amp; ... &amp; x_{1p} \\  x_{21} &amp; x_{22} &amp; ... &amp; x_{2p}\\  ... &amp; ... &amp; ... &amp; ... \\  x_{n1} &amp; x_{n2} &amp; ... &amp;x_{np} \end{bmatrix}\)</span></p><p>$$</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="降维dimensionality-reduction">降维(Dimensionality reduction)</h1><h2 id="背景">背景</h2><p>在机器学习中，相比于<strong>训练误差</strong>，更加关心<strong>泛化误差</strong>。</p><p>为了解决<strong>过拟合</strong>问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维</p><p>而在平常时维度过高可能会造成<strong>维度灾难</strong>，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。</p><h3 id="维度灾难disadvantages">维度灾难(disadvantages)</h3><h1 id="预备知识">预备知识</h1><p><span class="math display">\[\text{Data:}x=(x_{1},x_{2},...,x_{n})^\top_{n\times P}=\left[\begin{matrix}x^\top_{1} \\x^\top_{2} \\...\\x^\top_{n}\end{matrix}\right]=\left[\begin{matrix} x_{11} &amp; x_{12} &amp; ... &amp; x_{1p} \\ x_{21} &amp; x_{22} &amp; ... &amp; x_{2p}\\ ... &amp; ... &amp; ... &amp; ... \\ x_{n1} &amp; x_{n2} &amp; ... &amp;x_{np}\end{matrix}\right]_{n\times p}\]</span></p>]]></content>
       
       
       

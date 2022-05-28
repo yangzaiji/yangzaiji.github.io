@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="降维(Dimensionality reduction) 背景 在机器学习中，相比于训练误差，更加关心泛化误差。 为了解决过拟合问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维 而在平常时维度过高可能会造成维度灾难，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。 维度灾难(disadvantages) 预备知识 \(\text{Data:}x&#x3D;(x_{1">
+    <meta name="description" content="降维(Dimensionality reduction) 背景 在机器学习中，相比于训练误差，更加关心泛化误差。 为了解决过拟合问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维 而在平常时维度过高可能会造成维度灾难，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。 维度灾难(disadvantages) 预备知识 \[\text{Data:}x&#x3D;(x_{1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dimensionality reduction">
 <meta property="og:url" content="http://example.com/2022/05/23/Dimensionality-reduction/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="降维(Dimensionality reduction) 背景 在机器学习中，相比于训练误差，更加关心泛化误差。 为了解决过拟合问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维 而在平常时维度过高可能会造成维度灾难，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。 维度灾难(disadvantages) 预备知识 \(\text{Data:}x&#x3D;(x_{1">
+<meta property="og:description" content="降维(Dimensionality reduction) 背景 在机器学习中，相比于训练误差，更加关心泛化误差。 为了解决过拟合问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维 而在平常时维度过高可能会造成维度灾难，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。 维度灾难(disadvantages) 预备知识 \[\text{Data:}x&#x3D;(x_{1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-23T13:56:41.000Z">
-<meta property="article:modified_time" content="2022-05-26T13:40:43.302Z">
+<meta property="article:modified_time" content="2022-05-26T13:49:37.687Z">
 <meta property="article:author" content="Yang">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
@@ -61,6 +61,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -83,7 +86,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -153,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -233,7 +236,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-26 21:40:43" itemprop="dateModified" datetime="2022-05-26T21:40:43+08:00">2022-05-26</time>
+      <time title="修改时间：2022-05-26 21:49:37" itemprop="dateModified" datetime="2022-05-26T21:49:37+08:00">2022-05-26</time>
     </span>
 
   
@@ -260,8 +263,17 @@
 <p>而在平常时维度过高可能会造成<strong>维度灾难</strong>，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。</p>
 <h3 id="维度灾难disadvantages">维度灾难(disadvantages)</h3>
 <h1 id="预备知识">预备知识</h1>
-<p><span class="math inline">\(\text{Data:}x=(x_{1},x_{2},...,x_{n})^\top_{N\times P}=\begin{bmatrix} x^\top_{1} \\ x^\top_{2} \\ ...\\ x^\top_{n} \end{bmatrix}=\begin{bmatrix}  x_{11} &amp; x_{12} &amp; ... &amp; x_{1p} \\  x_{21} &amp; x_{22} &amp; ... &amp; x_{2p}\\  ... &amp; ... &amp; ... &amp; ... \\  x_{n1} &amp; x_{n2} &amp; ... &amp;x_{np} \end{bmatrix}\)</span></p>
-<p>$$</p>
+<p><span class="math display">\[\text{Data:}x=(x_{1},x_{2},...,x_{n})^\top_{n\times P}=\left[\begin{matrix}
+x^\top_{1} \\
+x^\top_{2} \\
+...\\
+x^\top_{n}
+\end{matrix}\right]=\left[\begin{matrix}
+ x_{11} &amp; x_{12} &amp; ... &amp; x_{1p} \\
+ x_{21} &amp; x_{22} &amp; ... &amp; x_{2p}\\
+ ... &amp; ... &amp; ... &amp; ... \\
+ x_{n1} &amp; x_{n2} &amp; ... &amp;x_{np}
+\end{matrix}\right]_{n\times p}\]</span></p>
 
     </div>
 
@@ -283,7 +295,7 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/05/25/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/" rel="next" title="多层感知机">
+                <a href="/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="next" title="多层感知机">
                   多层感知机 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
