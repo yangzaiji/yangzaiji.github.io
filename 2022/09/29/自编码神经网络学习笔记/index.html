@@ -20,27 +20,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quic">
+    <meta name="description" content="自编码神经网络 前言 神经网络最大的卖点就是其端到端(end-to-end)的过程 无论是用于图像处理的CNN，还是用于自然语言处理的RNN都可以看做为一种类似编码解码的过程 从编码-解码角度看CNN  CNN  在CNN中可以将编码-解码看做: 编码器:将输入编程成中间表达形式(特征) 解码器:将中间表示解码成输出 例如你将一只猫的图片当做模型的输入，首先图片将会经过一系列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/05/17/hello-world/index.html">
+<meta property="og:title" content="自编码神经网络学习笔记">
+<meta property="og:url" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quic">
+<meta property="og:description" content="自编码神经网络 前言 神经网络最大的卖点就是其端到端(end-to-end)的过程 无论是用于图像处理的CNN，还是用于自然语言处理的RNN都可以看做为一种类似编码解码的过程 从编码-解码角度看CNN  CNN  在CNN中可以将编码-解码看做: 编码器:将输入编程成中间表达形式(特征) 解码器:将中间表示解码成输出 例如你将一只猫的图片当做模型的输入，首先图片将会经过一系列">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-17T14:50:43.587Z">
-<meta property="article:modified_time" content="2022-05-26T13:41:14.727Z">
+<meta property="og:image" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CNN.png">
+<meta property="og:image" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/RNN.png">
+<meta property="og:image" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/incode-decode.png">
+<meta property="og:image" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/AENN.png">
+<meta property="article:published_time" content="2022-09-29T11:28:17.000Z">
+<meta property="article:modified_time" content="2022-09-29T12:34:14.431Z">
 <meta property="article:author" content="Yang">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CNN.png">
 
 
-<link rel="canonical" href="http://example.com/2022/05/17/hello-world/">
+<link rel="canonical" href="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/05/17/hello-world/","path":"2022/05/17/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2022/09/29/自编码神经网络学习笔记/","title":"自编码神经网络学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | Hexo</title>
+<title>自编码神经网络学习笔记 | Hexo</title>
   
 
 
@@ -142,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#quick-start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">1.</span> <span class="nav-text">自编码神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E7%BC%96%E7%A0%81-%E8%A7%A3%E7%A0%81%E8%A7%92%E5%BA%A6%E7%9C%8Bcnn"><span class="nav-number">1.1.1.</span> <span class="nav-text">从编码-解码角度看CNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E7%BC%96%E7%A0%81-%E8%A7%A3%E7%A0%81%E8%A7%92%E5%BA%A6%E7%9C%8Brnn"><span class="nav-number">1.1.2.</span> <span class="nav-text">从编码-解码角度看RNN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-1"><span class="nav-number">1.2.</span> <span class="nav-text">自编码神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E5%99%A8-%E8%A7%A3%E7%A0%81%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.1.</span> <span class="nav-text">编码器-解码器架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">自编码神经网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">训练过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.3.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -199,7 +204,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -212,12 +217,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | Hexo">
+      <meta itemprop="name" content="自编码神经网络学习笔记 | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          自编码神经网络学习笔记
         </h1>
 
         <div class="post-meta-container">
@@ -227,19 +232,13 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-05-17 22:50:43" itemprop="dateCreated datePublished" datetime="2022-05-17T22:50:43+08:00">2022-05-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-26 21:41:14" itemprop="dateModified" datetime="2022-05-26T21:41:14+08:00">2022-05-26</time>
+      <time title="创建时间：2022-09-29 19:28:17 / 修改时间：20:34:14" itemprop="dateCreated datePublished" datetime="2022-09-29T19:28:17+08:00">2022-09-29</time>
     </span>
 
   
-    <span id="/2022/05/17/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
+    <span id="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="自编码神经网络学习笔记" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -255,20 +254,47 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="自编码神经网络">自编码神经网络</h1>
+<h2 id="前言">前言</h2>
+<p>神经网络最大的卖点就是其端到端(end-to-end)的过程</p>
+<p>无论是用于图像处理的CNN，还是用于自然语言处理的RNN都可以看做为一种类似编码解码的过程</p>
+<h3 id="从编码-解码角度看cnn">从编码-解码角度看CNN</h3>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CNN.png" alt="CNN"><figcaption>CNN</figcaption>
+</figure>
+<p>在CNN中可以将编码-解码看做:</p>
+<p><strong>编码器</strong>:将输入编程成中间表达形式(特征)</p>
+<p><strong>解码器</strong>:将中间表示解码成输出</p>
+<p>例如你将一只猫的图片当做模型的输入，首先图片将会经过一系列的隐藏层进行特征提取。</p>
+<p>该过程就可以看做是一个编码的过程，及将一个原始的东西编码成为一个中间表达形式，其中间表达形式能够更加方便的使得机器进行学习。</p>
+<p>经过一些列的特征提取后，将提取到的特征通过softmax回归进行识别。</p>
+<p>该过程便是将前面隐藏层产生的中间形式进行解码输出。</p>
+<h3 id="从编码-解码角度看rnn">从编码-解码角度看RNN</h3>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/RNN.png" alt="RNN"><figcaption>RNN</figcaption>
+</figure>
+<p>在RNN中可以将编码-解码看成:</p>
+<p><strong>编码器</strong>:将文本表示成向量</p>
+<p><strong>解码器</strong>:向量表示成输出</p>
+<h2 id="自编码神经网络-1">自编码神经网络</h2>
+<h3 id="编码器-解码器架构">编码器-解码器架构</h3>
+<p>编码器-解码器架构便是将一个模型如图分为两块 1. Encoder 2. Decoder <img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/incode-decode.png" alt="编码器-解码器架构"></p>
+<p>输入经过编码器处理后将其转变成一种中间状态(State)后经过解码器将其转变为输出</p>
+<p>其中经过编码器处理后的中间状态将有助于机器进行学习(因为进行了筛选，等于只把重要信息保留，所以更有助于学习，就如PCA主成分分析的降维功效)</p>
+<h3 id="自编码神经网络-2">自编码神经网络</h3>
+<p>而所谓的自编码神经网络其实就是通过从原始数据中不断的提取重要信息，再利用得到的特征信息重新构建新的数据，而构建的新数据中包含了原始数据中重要的特征信息。其中中间状态是原始数据中的精髓</p>
+<p>可以看出自编码神经网络重头到尾只用到了原始数据的输入信息，并没有用到原始数据的标签，所以自编码神经网络是一个无监督学习的模型</p>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/AENN.png" alt="自编码神经网络模型结构图"><figcaption>自编码神经网络模型结构图</figcaption>
+</figure>
+<h3 id="训练过程">训练过程</h3>
+<p>其本质上任然是神经网络，并且没有创造出任何特殊层，就只是模型结构的变化</p>
+<p>因此训练过程任然按照神经网络的过程进行训练</p>
+<h2 id="参考">参考</h2>
+<pre><code>1. https://blog.csdn.net/hxxjxw/article/details/106869571?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-106869571.142^v51^new_blog_pos_by_title,201^v3^add_ask&amp;spm=1018.2226.3001.4187
+2. https://www.bilibili.com/video/BV1c54y1E7YP/?spm_id_from=333.999.0.0&amp;vd_source=bba5777f1f15698fba3ee38f0106b6e1
+3. https://www.bilibili.com/video/BV1Vx411j78H/?spm_id_from=333.999.0.0&amp;vd_source=bba5777f1f15698fba3ee38f0106b6e1
+4. https://zh.d2l.ai/chapter_recurrent-modern/encoder-decoder.html </code></pre>
 
     </div>
 
@@ -282,11 +308,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/08/10/RCNN%E7%AC%94%E8%AE%B0/" rel="prev" title="RCNN笔记">
+                  <i class="fa fa-chevron-left"></i> RCNN笔记
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/05/23/%E5%B0%8F%E6%89%B9%E9%87%8F%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" rel="next" title="小批量随机梯度下降">
-                  小批量随机梯度下降 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

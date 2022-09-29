@@ -150,7 +150,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -184,6 +184,123 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">自编码神经网络学习笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-09-29 19:28:17 / 修改时间：20:34:14" itemprop="dateCreated datePublished" datetime="2022-09-29T19:28:17+08:00">2022-09-29</time>
+    </span>
+
+  
+    <span id="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="自编码神经网络学习笔记" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="自编码神经网络">自编码神经网络</h1>
+<h2 id="前言">前言</h2>
+<p>神经网络最大的卖点就是其端到端(end-to-end)的过程</p>
+<p>无论是用于图像处理的CNN，还是用于自然语言处理的RNN都可以看做为一种类似编码解码的过程</p>
+<h3 id="从编码-解码角度看cnn">从编码-解码角度看CNN</h3>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CNN.png" alt="CNN"><figcaption>CNN</figcaption>
+</figure>
+<p>在CNN中可以将编码-解码看做:</p>
+<p><strong>编码器</strong>:将输入编程成中间表达形式(特征)</p>
+<p><strong>解码器</strong>:将中间表示解码成输出</p>
+<p>例如你将一只猫的图片当做模型的输入，首先图片将会经过一系列的隐藏层进行特征提取。</p>
+<p>该过程就可以看做是一个编码的过程，及将一个原始的东西编码成为一个中间表达形式，其中间表达形式能够更加方便的使得机器进行学习。</p>
+<p>经过一些列的特征提取后，将提取到的特征通过softmax回归进行识别。</p>
+<p>该过程便是将前面隐藏层产生的中间形式进行解码输出。</p>
+<h3 id="从编码-解码角度看rnn">从编码-解码角度看RNN</h3>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/RNN.png" alt="RNN"><figcaption>RNN</figcaption>
+</figure>
+<p>在RNN中可以将编码-解码看成:</p>
+<p><strong>编码器</strong>:将文本表示成向量</p>
+<p><strong>解码器</strong>:向量表示成输出</p>
+<h2 id="自编码神经网络-1">自编码神经网络</h2>
+<h3 id="编码器-解码器架构">编码器-解码器架构</h3>
+<p>编码器-解码器架构便是将一个模型如图分为两块 1. Encoder 2. Decoder <img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/incode-decode.png" alt="编码器-解码器架构"></p>
+<p>输入经过编码器处理后将其转变成一种中间状态(State)后经过解码器将其转变为输出</p>
+<p>其中经过编码器处理后的中间状态将有助于机器进行学习(因为进行了筛选，等于只把重要信息保留，所以更有助于学习，就如PCA主成分分析的降维功效)</p>
+<h3 id="自编码神经网络-2">自编码神经网络</h3>
+<p>而所谓的自编码神经网络其实就是通过从原始数据中不断的提取重要信息，再利用得到的特征信息重新构建新的数据，而构建的新数据中包含了原始数据中重要的特征信息。其中中间状态是原始数据中的精髓</p>
+<p>可以看出自编码神经网络重头到尾只用到了原始数据的输入信息，并没有用到原始数据的标签，所以自编码神经网络是一个无监督学习的模型</p>
+<figure>
+<img src="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/AENN.png" alt="自编码神经网络模型结构图"><figcaption>自编码神经网络模型结构图</figcaption>
+</figure>
+<h3 id="训练过程">训练过程</h3>
+<p>其本质上任然是神经网络，并且没有创造出任何特殊层，就只是模型结构的变化</p>
+<p>因此训练过程任然按照神经网络的过程进行训练</p>
+<h2 id="参考">参考</h2>
+<pre><code>1. https://blog.csdn.net/hxxjxw/article/details/106869571?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-106869571.142^v51^new_blog_pos_by_title,201^v3^add_ask&amp;spm=1018.2226.3001.4187
+2. https://www.bilibili.com/video/BV1c54y1E7YP/?spm_id_from=333.999.0.0&amp;vd_source=bba5777f1f15698fba3ee38f0106b6e1
+3. https://www.bilibili.com/video/BV1Vx411j78H/?spm_id_from=333.999.0.0&amp;vd_source=bba5777f1f15698fba3ee38f0106b6e1
+4. https://zh.d2l.ai/chapter_recurrent-modern/encoder-decoder.html </code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -229,7 +346,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-14 15:15:57" itemprop="dateModified" datetime="2022-08-14T15:15:57+08:00">2022-08-14</time>
+      <time title="修改时间：2022-08-14 15:25:45" itemprop="dateModified" datetime="2022-08-14T15:25:45+08:00">2022-08-14</time>
     </span>
 
   
@@ -276,7 +393,7 @@
 <img src="/2022/08/10/RCNN%E7%AC%94%E8%AE%B0/2.png" alt="结构图"><figcaption>结构图</figcaption>
 </figure>
 <ul>
-<li><p>左边输入框进入2$$2 ROL池化层后</p></li>
+<li><p>左边输入框进入2 <span class="math inline">\(\times\)</span> 2 ROL池化层后</p></li>
 <li><p>先均匀的分成 4块</p></li>
 <li><p>左上 5 = max(0,1,4,5) 右上 6 = max(1,2,5,6)依次类推</p></li>
 </ul>
@@ -394,7 +511,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-14 15:16:07" itemprop="dateModified" datetime="2022-08-14T15:16:07+08:00">2022-08-14</time>
+      <time title="修改时间：2022-08-14 15:16:25" itemprop="dateModified" datetime="2022-08-14T15:16:25+08:00">2022-08-14</time>
     </span>
 
   
