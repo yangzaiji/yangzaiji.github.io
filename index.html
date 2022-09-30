@@ -223,7 +223,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-09-30 10:45:37 / 修改时间：11:18:05" itemprop="dateCreated datePublished" datetime="2022-09-30T10:45:37+08:00">2022-09-30</time>
+      <time title="创建时间：2022-09-30 10:45:37 / 修改时间：12:13:38" itemprop="dateCreated datePublished" datetime="2022-09-30T10:45:37+08:00">2022-09-30</time>
     </span>
 
   
@@ -243,8 +243,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><span class="math display">\[
-\begin{equation}
+          <h1 id="第一问">第一问</h1>
+<p>对于第一问来说，a c组与b d组的求解过程是对称的，只是对于系数符号有所变换，因此在此只给出a c组的求解，b d组只需要在所求解的结果上更改部分符号便可</p>
+<p><span class="math display">\[
+\begin{equation*}
 \begin{aligned}
 e&amp;=m_{1}a+m_{2}b \\
 f&amp;=m_{3}a+m_{4}b\\
@@ -270,8 +272,18 @@ i(z_{(1)}-((e + f)(im_{2} + jm_{4}))/(m_{2} + m_{3}))/(im_{1} + jm_{3} - ((m_{1}
 +
 j(z_{(2)}- ((g + h)(lm_{2} + lm_{4}))/(m_{2} + m_{3}))/(km_{1} + km_{3} - ((m_{1} + m_{3})*(lm_{2} + lm_{4}))/(m_{2} + m_{3}))
 \end{aligned}
-\end{equation} 
+\end{equation*} 
 \]</span></p>
+<h1 id="第二问">第二问</h1>
+<p>由于第二问和第一问的数据并无变化，因此我认为不需要对第二问直接进行求解，只需要将<span class="math inline">\(z^{新}\)</span>与<span class="math inline">\(z^{旧}\)</span>的变化映射写出，便可归结于第一问的问题求解</p>
+<p>其新旧函数的变化映射可写为: <span class="math display">\[
+\begin{equation*}
+\begin{aligned}
+z^{旧}_{1}=ie+jf = z^{新}_{1}-jz^{新}_{2}/k-jg-jlh/k\\
+z^{旧}_{2}=kf+lh = kz^{新}_{1}/j+z^{新}_{2}-kg-kie/j
+\end{aligned}
+\end{equation*} 
+\]</span> 将其带入第一问求解的a b c d中便可，具体的值就不在此赘述了</p>
 
       
     </div>
