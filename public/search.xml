@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>公式推导-练习</title>
+      <link href="/2022/09/30/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC-%E7%BB%83%E4%B9%A0/"/>
+      <url>/2022/09/30/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC-%E7%BB%83%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p><span class="math display">\[\begin{equation}\begin{aligned}e&amp;=m_{1}a+m_{2}b \\f&amp;=m_{3}a+m_{4}b\\g&amp; = m_{1}c+m_{2}d\\h&amp;=m_{3}c+m_{4}d\\b&amp;=(e+f-(m_{1}+m_{3})a)/(m_{2}+m_{3})\\d&amp;=(g+h-(m_{1}+m_{3})c)/(m_{2}+m_{3})\\z_{(1)}&amp;=ie+jf\\&amp;=(im_{1}+jm_{3})a+(im_{2}+jm_{4})b\\&amp;=(im_{1}+jm_{3})a+(im_{2}+jm_{4})(e+f-(m_{1}+m_{3})a)/(m_{2}+m_{3})\\&amp;=(im_{1} + jm_{3} - ((m_{1} + m_{3})(im_{2} + jm_{4}))/(m_{2} + m_{3}))a + ((e + f)(im_{2} + jm_{4}))/(m_{2} + m_{3})\\ia&amp;= i(z_{(1)}-((e + f)(im_{2} + jm_{4}))/(m_{2} + m_{3}))/(im_{1} + jm_{3} - ((m_{1} + m_{3})(im_{2} + jm_{4}))/(m_{2} + m_{3}))\\z_{(2)} &amp;=kb+ld=(km_{1}+km_{3})c+(lm_{2}+lm_{4})d\\&amp;=(km_{1}+km_{3})c+(lm_{2}+lm_{4})(g+h-(m_{1}+m_{3})c)/(m_{2}+m_{3})\\&amp;=(km_{1} + km_{3} - ((m_{1} + m_{3})*(lm_{2} + lm_{4}))/(m_{2} + m_{3}))c + ((g + h)(lm_{2} + lm_{4}))/(m_{2} + m_{3})\\jc&amp;=j(z_{(2)}- ((g + h)(lm_{2} + lm_{4}))/(m_{2} + m_{3}))/(km_{1} + km_{3} - ((m_{1} + m_{3})*(lm_{2} + lm_{4}))/(m_{2} + m_{3}))\\ia+jc&amp;= i(z_{(1)}-((e + f)(im_{2} + jm_{4}))/(m_{2} + m_{3}))/(im_{1} + jm_{3} - ((m_{1} + m_{3})(im_{2} + jm_{4}))/(m_{2} + m_{3})) +j(z_{(2)}- ((g + h)(lm_{2} + lm_{4}))/(m_{2} + m_{3}))/(km_{1} + km_{3} - ((m_{1} + m_{3})*(lm_{2} + lm_{4}))/(m_{2} + m_{3}))\end{aligned}\end{equation} \]</span></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自编码神经网络学习笔记</title>
       <link href="/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/09/29/%E8%87%AA%E7%BC%96%E7%A0%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
