@@ -150,7 +150,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -184,6 +184,349 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/15/%E5%99%AA%E5%A3%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/03/15/%E5%99%AA%E5%A3%B0%E7%BB%84/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-15 16:25:18" itemprop="dateCreated datePublished" datetime="2023-03-15T16:25:18+08:00">2023-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-14 21:08:49" itemprop="dateModified" datetime="2023-03-14T21:08:49+08:00">2023-03-14</time>
+    </span>
+
+  
+    <span id="/2023/03/15/%E5%99%AA%E5%A3%B0%E7%BB%84/" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="处理恶意数据和带噪声的数据相关研究搜集部分">处理恶意数据和带噪声的数据相关研究搜集(部分)</h1>
+<h2 id="mixup-beyond-empirical-risk-minimization">mixup: Beyond Empirical Risk Minimization</h2>
+<p>地址:https://arxiv.org/abs/1710.09412</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>author</th>
+<th>introduction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hongyi Zhang, Moustapha Cisse, Yann N. Dauphin, David Lopez-Paz</td>
+<td>Large deep neural networks are powerful, but exhibit undesirable behaviors such as memorization and sensitivity to adversarial examples. In this work, we propose mixup, a simple learning principle to alleviate these issues. In essence, mixup trains a neural network on convex combinations of pairs of examples and their labels. By doing so, mixup regularizes the neural network to favor simple linear behavior in-between training examples. Our experiments on the ImageNet-2012, CIFAR-10, CIFAR-100, Google commands and UCI datasets show that mixup improves the generalization of state-of-the-art neural network architectures. We also find that mixup reduces the memorization of corrupt labels, increases the robustness to adversarial examples, and stabilizes the training of generative adversarial networks.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>大型深度神经网络功能强大，但表现出不良行为 比如记忆和对对抗性例子的敏感性。在这项工作中，我们提出混淆，一个简单的学习原则来缓解这些问题。在从本质上讲，Mixup 在 示例及其标签。通过这样做，混淆将神经网络正则化为 支持训练示例之间的简单线性行为。我们的实验 ImageNet-2012、CIFAR-10、CIFAR-100、Google 命令和 UCI 数据集显示 这种混淆改善了最先进的神经网络的泛化。 架构。我们还发现，混淆减少了对腐败的记忆 标签，增加对抗性示例的鲁棒性，并稳定 生成对抗网络的训练。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mentornet-learning-data-driven-curriculum-for-very-deep-neural-networks-on-corrupted-labels">MentorNet: Learning Data-Driven Curriculum for Very Deep Neural Networks on Corrupted Labels</h2>
+<p>地址:https://arxiv.org/abs/1712.05055</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>author</th>
+<th>introduction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, Li Fei-Fei</td>
+<td>Recent deep networks are capable of memorizing the entire data even when the labels are completely random. To overcome the overfitting on corrupted labels, we propose a novel technique of learning another neural network, called MentorNet, to supervise the training of the base deep networks, namely, StudentNet. During training, MentorNet provides a curriculum (sample weighting scheme) for StudentNet to focus on the sample the label of which is probably correct. Unlike the existing curriculum that is usually predefined by human experts, MentorNet learns a data-driven curriculum dynamically with StudentNet. Experimental results demonstrate that our approach can significantly improve the generalization performance of deep networks trained on corrupted training data. Notably, to the best of our knowledge, we achieve the best-published result on WebVision, a large benchmark containing 2.2 million images of real-world noisy labels. The code are at this https URL</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>最近的深度网络能够记住整个数据，即使 标签是完全随机的。为了克服损坏标签上的过度拟合， 我们提出了一种学习另一种神经网络的新技术，称为 MentorNet，监督基础深度网络的培训，即 学生网.在培训期间，导师网提供课程（样本加权 方案）让学生网专注于样本，其标签可能是 正确。与通常由人类预定义的现有课程不同 专家，MentorNet通过StudentNet动态学习数据驱动的课程。 实验结果表明，我们的方法可以显著提高 在损坏训练上训练的深度网络的泛化性能 数据。值得注意的是，据我们所知，我们取得了最好的出版成果 WebVision 上的结果，这是一个包含 2 万张图像的大型基准测试 现实世界的嘈杂标签。</td>
+</tr>
+</tbody>
+</table>
+<p>代码:https://github.com/google/mentornet</p>
+<h2 id="beyond-synthetic-noise-deep-learning-on-controlled-noisy-labels">Beyond Synthetic Noise: Deep Learning on Controlled Noisy Labels</h2>
+<p>地址:https://arxiv.org/abs/1911.09781</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>author</th>
+<th>introduction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lu Jiang, Di Huang, Mason Liu, Weilong Yang</td>
+<td>Performing controlled experiments on noisy data is essential in understanding deep learning across noise levels. Due to the lack of suitable datasets, previous research has only examined deep learning on controlled synthetic label noise, and real-world label noise has never been studied in a controlled setting. This paper makes three contributions. First, we establish the first benchmark of controlled real-world label noise from the web. This new benchmark enables us to study the web label noise in a controlled setting for the first time. The second contribution is a simple but effective method to overcome both synthetic and real noisy labels. We show that our method achieves the best result on our dataset as well as on two public benchmarks (CIFAR and WebVision). Third, we conduct the largest study by far into understanding deep neural networks trained on noisy labels across different noise levels, noise types, network architectures, and training settings. The data and code are released at the following link: this http URL</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>对嘈杂数据进行对照实验对于理解至关重要 跨噪声水平的深度学习。由于缺乏合适的数据集， 以前的研究只研究了受控合成标签上的深度学习 噪声和现实世界的标签噪声从未在受控环境中进行过研究 设置。本文有三点贡献。首先，我们建立第一个 来自网络的真实世界标签噪声的受控基准。这个新的基准 使我们能够首次在受控设置中研究网络标签噪声 时间。第二个贡献是克服两者的简单但有效的方法 合成和真正的嘈杂标签。我们证明我们的方法实现了最好的 在我们的数据集以及两个公共基准（CIFAR和 网络视觉）。第三，我们进行了迄今为止规模最大的研究，以深入了解 在不同噪声水平的噪声标签上训练神经网络，噪声 类型、网络体系结构和训练设置。</td>
+</tr>
+</tbody>
+</table>
+<p>代码:http://www.lujiang.info/cnlw.html</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/24/ChatGPT-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/02/24/ChatGPT-1/" class="post-title-link" itemprop="url">ChatGPT-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-02-24 00:45:09" itemprop="dateCreated datePublished" datetime="2023-02-24T00:45:09+08:00">2023-02-24</time>
+    </span>
+
+  
+    <span id="/2023/02/24/ChatGPT-1/" class="post-meta-item leancloud_visitors" data-flag-title="ChatGPT-1" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/28/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/28/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">序列模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-28 19:26:48" itemprop="dateCreated datePublished" datetime="2022-10-28T19:26:48+08:00">2022-10-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-04 13:03:31" itemprop="dateModified" datetime="2022-11-04T13:03:31+08:00">2022-11-04</time>
+    </span>
+
+  
+    <span id="/2022/10/28/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/" class="post-meta-item leancloud_visitors" data-flag-title="序列模型" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="序列问题的模型建立">序列问题的模型建立</h2>
+<p>在时间<span class="math inline">\(t\)</span>观察到<span class="math inline">\(x_t\)</span>，那么得到<span class="math inline">\(T\)</span>个不独立的随机变量<span class="math inline">\((x_1,...,x_T) \sim p(\mathbf{x})\)</span></p>
+<p>联合概率可以用条件概率展开</p>
+<h3 id="条件概率公式">条件概率公式</h3>
+<p><span class="math display">\[p(a, b)=p(a) p(b \mid a)=p(b) p(a \mid b)\]</span></p>
+<p>由于条件概率公式，可以得到<span class="math inline">\(p(\mathbf{x})\)</span></p>
+<p><span class="math inline">\(p(\mathbf{x})=p(x_1)\cdot p(x_2|x_1)\cdot p(x_3|x_1,x_2)\cdot...p(x_T|x_1,x_2,...,x_{T-1})\)</span></p>
+<p>或</p>
+<p><span class="math inline">\(p(\mathbf{x})=p(x_T)\cdot p(x_{T-1}|x_T)\cdot p(x_{T-2}|x_{T-1},x_T)\cdot...p(x_1|x_2,x_3,...,x_{T})\)</span></p>
+<p>以前项(1到t)为例</p>
+<p>对于条件概率建模</p>
+<p><span class="math display">\[p(x_t|x_1,...,x_{t-1})=p(x_t|f(x_1,...,x_{t-1}))\]</span></p>
+<p>其中<span class="math inline">\(f(x_1,...,x_{t-1})\)</span>为对见过的数据建模，也称为自回归模型</p>
+<h4 id="自回归模型">自回归模型</h4>
+<p>用<span class="math inline">\(x_1\)</span>到<span class="math inline">\(x_{t-1}\)</span>来预测<span class="math inline">\(x_t\)</span>而不是用<span class="math inline">\(x\)</span>来预测<span class="math inline">\(y\)</span></p>
+<h3 id="马尔科夫假设">马尔科夫假设</h3>
+<p>假设当前数据只和<span class="math inline">\(\tau\)</span>个过去数据点相关</p>
+<p><span class="math inline">\(p(x_t|x_1,...,x_{t-1})=p(x_t|x_{t-\tau},...,x_{t-1})=p(x_t|f(x_{t-\tau},...,x_{t-1}))\)</span></p>
+<p>意图:<span class="math inline">\(\tau\)</span>的固定使得所计算的条件概率模型不会随着时间的增大而增大</p>
+<p>例如:明天的股票可能和近几年相关，但是和十年前，二十年前关系可能不大；</p>
+<h3 id="潜变量模型">潜变量模型</h3>
+<p>引入潜变量<span class="math inline">\(h_t\)</span>来表示过去信息<span class="math inline">\(h_t=f(x_1,...,x_{t-1})\)</span></p>
+<p>这样可以用<span class="math inline">\(\hat{x}_t=p(x_t|h_t)\)</span> 来估计<span class="math inline">\(x_t\)</span></p>
+<p>及可将原问题模型拆解成:</p>
+<ol type="1">
+<li><span class="math inline">\(\hat{x}_t=P(x_t|h_t)\)</span></li>
+<li><span class="math inline">\(h_t=g(h_{t-1},x_{t-1})\)</span></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1026,290 +1369,6 @@ kf+lh &amp;= z^{新}_{2}/(m_{4} - (m_{3}(m_{2}n_{1} + m_{4}n_{2}))/(m_{1}n_{1} +
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">神经网络</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-05-25 22:18:30" itemprop="dateCreated datePublished" datetime="2022-05-25T22:18:30+08:00">2022-05-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-13 12:36:06" itemprop="dateModified" datetime="2022-06-13T12:36:06+08:00">2022-06-13</time>
-    </span>
-
-  
-    <span id="/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="post-meta-item leancloud_visitors" data-flag-title="神经网络" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="neural-networks">Neural Networks</h1>
-<h2 id="背景">背景</h2>
-<h3 id="text-handcrafted-features-rightarrow-text-learned-features"><span class="math inline">\(\text { Handcrafted Features } \rightarrow \text { Learned Features }\)</span></h3>
-<figure>
-<img src="/2022/05/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/1.png" alt="手动提取特征到学习特征"><figcaption>手动提取特征到学习特征</figcaption>
-</figure>
-<p>传统的机器学习通常需要对原始数据进行一些特征工程提取数据特征，在放到机器学习模型中。</p>
-<p>而神经网络(以及所谓的深度学习，深度神经网络)可以看做是将传统的机器学习模型训练流程中的人工提取特征换成一个神经网络来进行特征提取。</p>
-<p>将特征提取和线性(或者softmax)回归一起进行训练，所以相比于人工提取特征来说，数据经过训练后的特征提取器(神经网络)得到的特征更适合线性(或者softmax)回归，所以精度往往更加。</p>
-<p><strong>缺点</strong>:神经网络模型相比于其他传统的及其学习模型来说，对于<strong>数据量</strong>和<strong>计算量</strong>的需求往往大数个<strong>数量级</strong>（1000倍，1w倍甚至10w倍），主要因素在于计算机在进行特征提取的时候没有人这么多的先验知识,所以只能通过大量的数据不断地去做损失迭代更新来学习。 ____</p>
-<h2 id="neural-networks中常见的特征提取模型">Neural Networks中常见的特征提取模型</h2>
-<ul>
-<li>Multilayer perceptions(MLP)</li>
-<li>Convolutional neural networks(CNN)</li>
-<li>Recurrent neural networks(RNN)</li>
-<li>Transsformers(最近兴起的)</li>
-<li>Attention mechanism</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/23/Dimensionality-reduction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/23/Dimensionality-reduction/" class="post-title-link" itemprop="url">Dimensionality reduction</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-05-23 21:56:41" itemprop="dateCreated datePublished" datetime="2022-05-23T21:56:41+08:00">2022-05-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-26 21:49:37" itemprop="dateModified" datetime="2022-05-26T21:49:37+08:00">2022-05-26</time>
-    </span>
-
-  
-    <span id="/2022/05/23/Dimensionality-reduction/" class="post-meta-item leancloud_visitors" data-flag-title="Dimensionality reduction" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="降维dimensionality-reduction">降维(Dimensionality reduction)</h1>
-<h2 id="背景">背景</h2>
-<p>在机器学习中，相比于<strong>训练误差</strong>，更加关心<strong>泛化误差</strong>。</p>
-<p>为了解决<strong>过拟合</strong>问题，大致有以下方法 * 扩大数据集 * 正则化hexo * 降维</p>
-<p>而在平常时维度过高可能会造成<strong>维度灾难</strong>，而在没有扩大数据集的办法的 情况下可以选择将其降维来解决。</p>
-<h3 id="维度灾难disadvantages">维度灾难(disadvantages)</h3>
-<h1 id="预备知识">预备知识</h1>
-<p><span class="math display">\[\text{Data:}x=(x_{1},x_{2},...,x_{n})^\top_{n\times P}=\left[\begin{matrix}
-x^\top_{1} \\
-x^\top_{2} \\
-...\\
-x^\top_{n}
-\end{matrix}\right]=\left[\begin{matrix}
- x_{11} &amp; x_{12} &amp; ... &amp; x_{1p} \\
- x_{21} &amp; x_{22} &amp; ... &amp; x_{2p}\\
- ... &amp; ... &amp; ... &amp; ... \\
- x_{n1} &amp; x_{n2} &amp; ... &amp;x_{np}
-\end{matrix}\right]_{n\times p}\]</span></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/23/123/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/23/123/" class="post-title-link" itemprop="url">123</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-05-23 20:29:30" itemprop="dateCreated datePublished" datetime="2022-05-23T20:29:30+08:00">2022-05-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-26 21:41:14" itemprop="dateModified" datetime="2022-05-26T21:41:14+08:00">2022-05-26</time>
-    </span>
-
-  
-    <span id="/2022/05/23/123/" class="post-meta-item leancloud_visitors" data-flag-title="123" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><span class="math display">\[b\]</span></p>
-<p>da</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1323,7 +1382,7 @@ x^\top_{n}
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
