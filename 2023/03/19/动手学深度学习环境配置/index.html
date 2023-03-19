@@ -20,27 +20,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="https:&#x2F;&#x2F;archive.ics.uci.edu&#x2F;ml&#x2F;machine-learning-databases&#x2F;breast.cancer-wisconsin&#x2F;breast-cancer-wisconsin.data">
+    <meta name="description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon comp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习实战——读书笔记1">
-<meta property="og:url" content="http://example.com/2022/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/index.html">
+<meta property="og:title" content="动手学深度学习环境配置">
+<meta property="og:url" content="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="https:&#x2F;&#x2F;archive.ics.uci.edu&#x2F;ml&#x2F;machine-learning-databases&#x2F;breast.cancer-wisconsin&#x2F;breast-cancer-wisconsin.data">
+<meta property="og:description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon comp">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-02T05:37:27.000Z">
-<meta property="article:modified_time" content="2022-10-07T07:26:22.130Z">
+<meta property="og:image" content="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png">
+<meta property="article:published_time" content="2023-03-19T14:10:04.000Z">
+<meta property="article:modified_time" content="2023-03-19T14:55:57.063Z">
 <meta property="article:author" content="Yang">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="pytorch">
+<meta property="article:tag" content="conda">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png">
 
 
-<link rel="canonical" href="http://example.com/2022/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/">
+<link rel="canonical" href="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/","path":"2022/10/02/机器学习实战——读书笔记1/","title":"机器学习实战——读书笔记1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/","path":"2023/03/19/动手学深度学习环境配置/","title":"动手学深度学习环境配置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>机器学习实战——读书笔记1 | Hexo</title>
+<title>动手学深度学习环境配置 | Hexo</title>
   
 
 
@@ -129,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">windows下配置动手学深度学习环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDconda"><span class="nav-number">1.1.</span> <span class="nav-text">下载conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">conda更换镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">git安装与使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.4.</span> <span class="nav-text">使用conda创建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pytorchcpu%E7%89%88%E6%9C%AC%E5%92%8Cd2l"><span class="nav-number">1.5.</span> <span class="nav-text">安装pytorch(CPU版本)和d2l</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">1.6.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/rabbit.jpg">
@@ -219,12 +225,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="机器学习实战——读书笔记1 | Hexo">
+      <meta itemprop="name" content="动手学深度学习环境配置 | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          机器学习实战——读书笔记1
+          动手学深度学习环境配置
         </h1>
 
         <div class="post-meta-container">
@@ -234,19 +240,22 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-10-02 13:37:27" itemprop="dateCreated datePublished" datetime="2022-10-02T13:37:27+08:00">2022-10-02</time>
+      <time title="创建时间：2023-03-19 22:10:04 / 修改时间：22:55:57" itemprop="dateCreated datePublished" datetime="2023-03-19T22:10:04+08:00">2023-03-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
+        <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-07 15:26:22" itemprop="dateModified" datetime="2022-10-07T15:26:22+08:00">2022-10-07</time>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">动手学深度学习笔记</span></a>
+        </span>
     </span>
 
   
-    <span id="/2022/10/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" class="post-meta-item leancloud_visitors" data-flag-title="机器学习实战——读书笔记1" title="阅读次数">
+    <span id="/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="动手学深度学习环境配置" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -262,7 +271,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>https://archive.ics.uci.edu/ml/machine-learning-databases/breast.cancer-wisconsin/breast-cancer-wisconsin.data</p>
+        <h2 id="windows下配置动手学深度学习环境">windows下配置动手学深度学习环境</h2>
+<h3 id="下载conda">下载conda</h3>
+<p>Anaconda官网链接:<a target="_blank" rel="noopener" href="https://www.anaconda.com/" class="uri">https://www.anaconda.com/</a></p>
+<p>Miniconda:<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html" class="uri">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<p>非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon completion</p>
+<h3 id="conda更换镜像源">conda更换镜像源</h3>
+<p>推荐上交大conda镜像源：<a target="_blank" rel="noopener" href="https://mirrors.sjtug.sjtu.edu.cn/docs/anaconda" class="uri">https://mirrors.sjtug.sjtu.edu.cn/docs/anaconda</a></p>
+<p>复制文本，打开<img src="/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png" alt="Anaconda Prompt"></p>
+<p>输入一下指令 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad .condarc</span><br></pre></td></tr></table></figure> 将文本复制到新创建的文件中,后在Anaconda Prompt输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean -i</span><br></pre></td></tr></table></figure> ### PyPI更换镜像源</p>
+<p>推荐上交大镜像源：<a target="_blank" rel="noopener" href="https://mirrors.sjtug.sjtu.edu.cn/docs/pypi-packages" class="uri">https://mirrors.sjtug.sjtu.edu.cn/docs/pypi-packages</a></p>
+<p>按照官方文档同conda换源一样操作</p>
+<h3 id="git安装与使用">git安装与使用</h3>
+<p>git下载地址:<a target="_blank" rel="noopener" href="http://git-scm.com/download" class="uri">http://git-scm.com/download</a></p>
+<p>github下载加速网站:<a target="_blank" rel="noopener" href="https://ghproxy.com" class="uri">https://ghproxy.com</a></p>
+<p>之后无脑下一步</p>
+<p>如果安装成功后win+R 输入cmd打开命令终端输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure> 如果出现版本号即是安装成功</p>
+<h3 id="使用conda创建虚拟环境">使用conda创建虚拟环境</h3>
+<p>打开 Anaconda Prompt 或者从cmd中输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name d2l python=3.9 -y</span><br></pre></td></tr></table></figure> 创建虚拟环境</p>
+<p>等虚拟环境创建好后 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate d2l</span><br></pre></td></tr></table></figure> 激活虚拟环境</p>
+<h3 id="安装pytorchcpu版本和d2l">安装pytorch(CPU版本)和d2l</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install torch==1.12.0</span><br><span class="line">pip install torchvision==0.13.0</span><br><span class="line">pip install d2l==0.17.6</span><br></pre></td></tr></table></figure>
+<p>激活虚拟环境后如果下载速度还是很慢就按照上面还原pipy的步骤进行换源</p>
+<h3 id="其他">其他</h3>
+<p>关闭虚拟环境 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure></p>
+<p>删除虚拟环境 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env remove --name your_env_name</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -271,19 +304,21 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+              <a href="/tags/pytorch/" rel="tag"># pytorch</a>
+              <a href="/tags/conda/" rel="tag"># conda</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/09/30/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC-%E7%BB%83%E4%B9%A0/" rel="prev" title="公式推导-练习">
-                  <i class="fa fa-chevron-left"></i> 公式推导-练习
+                <a href="/2023/03/19/tages/" rel="prev" title="tages">
+                  <i class="fa fa-chevron-left"></i> tages
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/10/28/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B/" rel="next" title="序列模型">
-                  序列模型 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -337,7 +372,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
