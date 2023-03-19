@@ -20,16 +20,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon comp">
+    <meta name="description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon co">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动手学深度学习环境配置">
 <meta property="og:url" content="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon comp">
+<meta property="og:description" content="windows下配置动手学深度学习环境 下载conda Anaconda官网链接:https:&#x2F;&#x2F;www.anaconda.com&#x2F; Miniconda:https:&#x2F;&#x2F;docs.conda.io&#x2F;en&#x2F;latest&#x2F;miniconda.html 非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon co">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png">
 <meta property="article:published_time" content="2023-03-19T14:10:04.000Z">
-<meta property="article:modified_time" content="2023-03-19T15:13:18.668Z">
+<meta property="article:modified_time" content="2023-03-19T15:26:20.624Z">
 <meta property="article:author" content="Yang">
 <meta property="article:tag" content="windows">
 <meta property="article:tag" content="pytorch">
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">windows下配置动手学深度学习环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDconda"><span class="nav-number">1.1.</span> <span class="nav-text">下载conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">conda更换镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">git安装与使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.4.</span> <span class="nav-text">使用conda创建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pytorchcpu%E7%89%88%E6%9C%AC%E5%92%8Cd2l"><span class="nav-number">1.5.</span> <span class="nav-text">安装pytorch(CPU版本)和d2l</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">1.6.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">windows下配置动手学深度学习环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDconda"><span class="nav-number">1.1.</span> <span class="nav-text">下载conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">conda更换镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pypi%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.3.</span> <span class="nav-text">PyPI更换镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-number">1.4.</span> <span class="nav-text">git安装与使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.5.</span> <span class="nav-text">使用conda创建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pytorchcpu%E7%89%88%E6%9C%AC%E5%92%8Cd2l"><span class="nav-number">1.6.</span> <span class="nav-text">安装pytorch(CPU版本)和d2l</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">1.7.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -242,7 +242,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-03-19 22:10:04 / 修改时间：23:13:18" itemprop="dateCreated datePublished" datetime="2023-03-19T22:10:04+08:00">2023-03-19</time>
+      <time title="创建时间：2023-03-19 22:10:04 / 修改时间：23:26:20" itemprop="dateCreated datePublished" datetime="2023-03-19T22:10:04+08:00">2023-03-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,11 +282,14 @@
 <h3 id="下载conda">下载conda</h3>
 <p>Anaconda官网链接:<a target="_blank" rel="noopener" href="https://www.anaconda.com/" class="uri">https://www.anaconda.com/</a></p>
 <p>Miniconda:<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html" class="uri">https://docs.conda.io/en/latest/miniconda.html</a></p>
-<p>非默认勾选以下 &gt; Just Me(recommended) &gt; Clear the package cache upon completion</p>
+<p>非默认勾选以下</p>
+<p>&gt; Just Me(recommended)</p>
+<p>&gt; Clear the package cache upon completion</p>
 <h3 id="conda更换镜像源">conda更换镜像源</h3>
 <p>推荐上交大conda镜像源：<a target="_blank" rel="noopener" href="https://mirrors.sjtug.sjtu.edu.cn/docs/anaconda" class="uri">https://mirrors.sjtug.sjtu.edu.cn/docs/anaconda</a></p>
 <p>复制文本，打开<img src="/2023/03/19/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png" alt="Anaconda Prompt"></p>
-<p>输入一下指令 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad .condarc</span><br></pre></td></tr></table></figure> 将文本复制到新创建的文件中,后在Anaconda Prompt输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean -i</span><br></pre></td></tr></table></figure> ### PyPI更换镜像源</p>
+<p>输入一下指令 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad .condarc</span><br></pre></td></tr></table></figure> 将文本复制到新创建的文件中,后在Anaconda Prompt输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean -i</span><br></pre></td></tr></table></figure></p>
+<h3 id="pypi更换镜像源">PyPI更换镜像源</h3>
 <p>推荐上交大镜像源：<a target="_blank" rel="noopener" href="https://mirrors.sjtug.sjtu.edu.cn/docs/pypi-packages" class="uri">https://mirrors.sjtug.sjtu.edu.cn/docs/pypi-packages</a></p>
 <p>按照官方文档同conda换源一样操作</p>
 <h3 id="git安装与使用">git安装与使用</h3>
